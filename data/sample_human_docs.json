@@ -1,0 +1,69 @@
+{
+  "calculate_average": {
+    "description": "Calculates the arithmetic mean of a list of numbers.\n\nThis function computes the average by summing all numbers in the input list and dividing by the count of elements. It provides a simple and efficient way to get the mean value.",
+    "parameters": {
+      "numbers": "List of numerical values to calculate the average from"
+    },
+    "returns": "Float value representing the arithmetic mean of the input numbers",
+    "examples": [
+      ">>> calculate_average([1, 2, 3, 4, 5])",
+      "3.0"
+    ]
+  },
+  "sort_items_by_key": {
+    "description": "Sorts a list of dictionaries by a specified key.\n\nThis function takes a list of dictionary items and sorts them based on a specified key value. It supports both ascending and descending order through the reverse parameter.",
+    "parameters": {
+      "items": "List of dictionaries to be sorted",
+      "key": "The dictionary key to use for sorting",
+      "reverse": "Boolean flag to sort in descending order (default: False)"
+    },
+    "returns": "List of dictionaries sorted by the specified key",
+    "examples": [
+      ">>> sort_items_by_key([{'age': 30}, {'age': 25}], 'age')",
+      "[{'age': 25}, {'age': 30}]"
+    ]
+  },
+  "validate_email": {
+    "description": "Validates an email address format using regex pattern matching.\n\nThis function checks if the provided email string matches the standard email format requirements. It verifies the presence of @ symbol, valid characters, and proper domain structure.",
+    "parameters": {
+      "email": "The email address string to validate"
+    },
+    "returns": "Boolean value indicating whether the email format is valid",
+    "examples": [
+      ">>> validate_email('user@example.com')",
+      "True",
+      ">>> validate_email('invalid-email')",
+      "False"
+    ]
+  },
+  "DataProcessor": {
+    "description": "A class for processing and caching data from a data source.\n\nThis class provides efficient data retrieval with built-in caching mechanisms to improve performance for repeated queries.",
+    "methods": {
+      "fetch_data": {
+        "description": "Retrieves data based on a query, using cache when available",
+        "parameters": {
+          "query": "The query string to fetch data for"
+        },
+        "returns": "The requested data from the source or cache"
+      },
+      "clear_cache": {
+        "description": "Clears all cached data",
+        "parameters": {},
+        "returns": "Boolean indicating successful cache clearance"
+      }
+    }
+  },
+  "process_text": {
+    "description": "Processes text with various transformation options.\n\nThis function provides flexible text processing capabilities including case normalization and punctuation removal. It's useful for text preprocessing in NLP pipelines.",
+    "parameters": {
+      "text": "The input text string to process",
+      "lowercase": "Boolean flag to convert text to lowercase (default: True)",
+      "remove_punctuation": "Boolean flag to remove punctuation characters (default: False)"
+    },
+    "returns": "Processed text string with applied transformations",
+    "examples": [
+      ">>> process_text('Hello, World!', lowercase=True, remove_punctuation=True)",
+      "'hello world'"
+    ]
+  }
+}
